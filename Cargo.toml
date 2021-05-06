@@ -1,0 +1,15 @@
+[package]
+name = "nn"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc-nnsdk = { path = "../libc-nnsdk" }
+bitflags = "1.2.1"
+nn-macro = { path = "./nn-macro" }
+# const_format = "0.2.14"
+
+[features]
+dev_inline = []
