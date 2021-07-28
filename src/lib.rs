@@ -1,7 +1,6 @@
 #![allow(dead_code)]
 #![allow(unused_imports)]
-#![feature(const_fn)]
-// #![feature(const_fn_floating_point_arithmetic)]
+#![feature(const_fn_floating_point_arithmetic)]
 
 #[macro_use]
 extern crate bitflags;
