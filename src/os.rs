@@ -1,3 +1,5 @@
+use alloc::string::String;
+use alloc::vec::Vec;
 use libc::*;
 use super::Result as NxResult;
 use super::{c_str, get_rust_result};

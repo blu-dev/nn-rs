@@ -1,6 +1,9 @@
+#![no_std]
 #![allow(dead_code)]
 #![allow(unused_imports)]
 #![feature(const_fn_floating_point_arithmetic)]
+
+extern crate alloc;
 
 #[macro_use]
 extern crate bitflags;
@@ -9,6 +12,7 @@ pub mod mem;
 pub mod fs;
 pub mod os;
 pub mod timespan;
+use alloc::{borrow::ToOwned, string::String};
 pub use timespan::TimeSpan;
 pub mod vi;
 

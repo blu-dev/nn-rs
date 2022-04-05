@@ -140,7 +140,7 @@ impl StandardAllocator {
     #[dev_inline]
     pub fn new() -> Self {
         unsafe {
-            let mut new = std::mem::MaybeUninit::uninit();
+            let mut new = core::mem::MaybeUninit::uninit();
             standard_allocator_impl::Constructor(new.as_mut_ptr());
             new.assume_init()
         }
@@ -149,7 +149,7 @@ impl StandardAllocator {
     #[dev_inline]
     pub fn new_init(memory: *mut c_void, size: usize) -> Self {
         unsafe {
-            let mut new = std::mem::MaybeUninit::uninit();
+            let mut new = core::mem::MaybeUninit::uninit();
             standard_allocator_impl::Constructor_Initialize(new.as_mut_ptr(), memory, size);
             new.assume_init()
         }
@@ -158,7 +158,7 @@ impl StandardAllocator {
     #[dev_inline]
     pub fn new_init_cache(memory: *mut c_void, size: usize, is_cache_enable: bool) -> Self {
         unsafe {
-            let mut new = std::mem::MaybeUninit::uninit();
+            let mut new = core::mem::MaybeUninit::uninit();
             standard_allocator_impl::Constructor_InitializeCached(new.as_mut_ptr(), memory, size, is_cache_enable);
             new.assume_init()
         }

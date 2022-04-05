@@ -1,9 +1,7 @@
-#![feature(str_strip)]
-use syn::{parse::ParseStream, parse_macro_input, token};
-use syn::parse::Parse;
+use syn::{parse_macro_input, token};
 use proc_macro::TokenStream;
-use proc_macro2::{Span, TokenStream as TokenStream2};
-use quote::{quote, ToTokens};
+use proc_macro2::Span;
+use quote::ToTokens;
 
 #[proc_macro]
 pub fn static_c_str(input: TokenStream) -> TokenStream {
